@@ -27,7 +27,7 @@ console.log(finalValue);
 
 console.log('==========================');
 
-function isContains (aray, searchValue) {
+function isContains (array, searchValue) {
     for (const element of array) {
         console.info(`iterasi element: ${element}`)
         if (element === searchValue) {
