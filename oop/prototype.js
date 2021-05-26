@@ -1,5 +1,6 @@
-function Employee(firstName) {
+function Employee(firstName, lastName) {
     this.firstName = firstName;
+    this.lastName = lastName;
     this.sayHello = function (name) {
       console.log(`Hello ${name}, My name is ${this.firstName}`);
     };

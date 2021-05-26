@@ -6,7 +6,7 @@ function Manager(name) {
   this.name = name;
 }
 
-// Manager.prototype = Employee.prototype; // penggunanaan yang salah
+// Manager.prototype = Employee.prototype; // <== penggunanaan yang salah
 Manager.prototype = Object.create(Employee.prototype);
 
 Manager.prototype.sayHello = function (name) {
