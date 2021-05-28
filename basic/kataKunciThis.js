@@ -18,4 +18,4 @@ const person = {
 };
 
 person.sayHello("Agung");
-person.sayHello('Juned');
+person.sayHello("Juned");

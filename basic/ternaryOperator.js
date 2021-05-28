@@ -11,4 +11,4 @@ const nilai = 70;
 
 let ucapan = nilai >= 75 ? "selamat anda lulus" : "silahkan coba lagi";
 
-console.log(ucapan)
+console.log(ucapan);

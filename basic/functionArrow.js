@@ -1,21 +1,21 @@
 // Arrow function
 const sayHello = (name) => {
-    const say = `Hello ${name}`;
-    console.log(say);
-}
+  const say = `Hello ${name}`;
+  console.log(say);
+};
 
-sayHello('Johar');
+sayHello("Johar");
 
 // Versi satu baris
 // const sayHello2 = (name) => console.log(`Hello ${name}`);
-const sayHello2 = name => console.log(`Hello ${name}`);
+const sayHello2 = (name) => console.log(`Hello ${name}`);
 
-sayHello2('Agung');
+sayHello2("Agung");
 
 // Menggunakan return
 const sum = (first, second) => {
-    return first + second;
-}
+  return first + second;
+};
 
 console.log(sum(20, 30));
 
@@ -24,9 +24,8 @@ const sum2 = (first, second) => first + second;
 
 console.log(sum2(20, 30));
 
-
 function giveMeName(callback) {
-    callback('Johar');
+  callback("Johar");
 }
 
 // Anonymous Function
@@ -35,4 +34,4 @@ function giveMeName(callback) {
 // })
 
 // Arrow Function
-giveMeName(name => console.log(`Hello ${name}`));
+giveMeName((name) => console.log(`Hello ${name}`));

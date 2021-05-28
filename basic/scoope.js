@@ -3,13 +3,13 @@ let counter = 0;
 
 // global scope
 function hitMe() {
-    // local scope hitMe
-    counter++;
+  // local scope hitMe
+  counter++;
 }
 
 // global scope
 function other() {
-    // local scope other
+  // local scope other
 }
 
 hitMe();
@@ -18,22 +18,22 @@ hitMe();
 console.log(counter);
 
 function first() {
-    // local scope first
-    let firstVariable = 'First';
+  // local scope first
+  let firstVariable = "First";
 
-    function firstNested() {
-        console.log(firstVariable);
-        const firstNestedvariable = 'First Nested';
-    }
+  function firstNested() {
+    console.log(firstVariable);
+    const firstNestedvariable = "First Nested";
+  }
 
-    firstNested();
-    // console.log(firstNestedvariable); //ERROR
+  firstNested();
+  // console.log(firstNestedvariable); //ERROR
 }
 
 function second() {
-    // local scope second
-    let secondVariable = 'Second';
-    // console.log(firstVariable); //ERROR
+  // local scope second
+  let secondVariable = "Second";
+  // console.log(firstVariable); //ERROR
 }
 
 first();

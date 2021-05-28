@@ -1,18 +1,18 @@
-const say = function(name) {
-    console.log(`Hello Nama Saya ${name}`);
-}
+const say = function (name) {
+  console.log(`Hello Nama Saya ${name}`);
+};
 
-say('Johar');
-say('Agung');
+say("Johar");
+say("Agung");
 
-console.log('==============');
+console.log("==============");
 
-function giveMeName (calllback) {
-    calllback('Johar');
+function giveMeName(calllback) {
+  calllback("Johar");
 }
 
 giveMeName(say);
 
-giveMeName(function(name) {
-    console.log(`Hi ${name}`);
+giveMeName(function (name) {
+  console.log(`Hi ${name}`);
 });

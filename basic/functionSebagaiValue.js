@@ -1,15 +1,15 @@
 function sayHello(name) {
-    console.log(`Hello ${name}`);
+  console.log(`Hello ${name}`);
 }
 
-sayHello('johar');
+sayHello("johar");
 
 const say = sayHello;
 
-say('agung');
+say("agung");
 
 function giveMeName(callback) {
-    callback('johar');
+  callback("johar");
 }
 
 giveMeName(sayHello);

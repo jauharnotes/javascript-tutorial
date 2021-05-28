@@ -47,27 +47,27 @@ console.log("=======================");
 console.log("============================");
 
 {
-    function displayperson({firsName, middleName, lastName}) {
-        console.log(firsName);
-        console.log(middleName);
-        console.log(lastName);
-    }
+  function displayperson({ firsName, middleName, lastName }) {
+    console.log(firsName);
+    console.log(middleName);
+    console.log(lastName);
+  }
 
-    const person = {
-        firsName: "Jauhar",
-        middleName: "Uddin",
-        lastName: "Batubara",
-    };
+  const person = {
+    firsName: "Jauhar",
+    middleName: "Uddin",
+    lastName: "Batubara",
+  };
 
-    displayperson(person);
+  displayperson(person);
 }
 
 console.log("============================");
 
 {
-    function sum([first, second]) {
-        return first + second;
-    }
+  function sum([first, second]) {
+    return first + second;
+  }
 
-    console.log(sum([2,4]));
+  console.log(sum([2, 4]));
 }

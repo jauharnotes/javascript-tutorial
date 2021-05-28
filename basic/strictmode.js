@@ -1,5 +1,5 @@
 function useStrictMode() {
-    'use strict'
+  "use strict";
   const person = {
     name: "Jauhar",
   };

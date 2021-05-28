@@ -1,7 +1,7 @@
-const data = 'FALSE';
+const data = "FALSE";
 
 if (data) {
-    console.log('TRUE');
+  console.log("TRUE");
 } else {
-    console.log('FALSE');
+  console.log("FALSE");
 }

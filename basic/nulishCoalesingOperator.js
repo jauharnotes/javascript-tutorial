@@ -7,12 +7,11 @@
 
 // console.log(data);
 
-
 // data = parameter ?? "Nilai default";
 
 // console.log(data);
 
-const foo = null ?? 'default string';
+const foo = null ?? "default string";
 document.writeln(`<p>${foo}</p>`);
 // expected output: "default string"
 

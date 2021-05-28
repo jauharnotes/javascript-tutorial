@@ -1,12 +1,12 @@
 function createAdder(value) {
-    const owner = 'Johar';
+  const owner = "Johar";
 
-    function add(param) {
-        console.log(owner);
-        return value + param;
-    }
+  function add(param) {
+    console.log(owner);
+    return value + param;
+  }
 
-    return add;
+  return add;
 }
 
 const addTwo = createAdder(2);

@@ -1,7 +1,7 @@
 const person = {
-    // address: {
-    //     country: "indonesia"
-    // }
+  // address: {
+  //     country: "indonesia"
+  // }
 };
 let country = person?.address?.country;
 

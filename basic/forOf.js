@@ -1,10 +1,9 @@
-
-const names = ['jauhar', 'uddin', 'batubara'];
+const names = ["jauhar", "uddin", "batubara"];
 for (const person of names) {
-    console.log(`${person}`);
+  console.log(`${person}`);
 }
 
-const fullName = 'jauhar uddin batubara';
+const fullName = "jauhar uddin batubara";
 for (character of fullName) {
-    console.log(`${character}`);
+  console.log(`${character}`);
 }
