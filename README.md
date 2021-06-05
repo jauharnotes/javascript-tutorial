@@ -89,4 +89,6 @@
   
 # Domain Object Model
 # JavaScript Async
+- SetInterval
+- Callback
 # Studi Kasus Membuat Aplikasi Menggunakan JavaScript
