@@ -89,6 +89,9 @@
   
 # Domain Object Model
 # JavaScript Async
-- SetInterval
+- Asyncrhonus
 - Callback
+- Promise
+- Async Awaite
+- Web Worker
 # Studi Kasus Membuat Aplikasi Menggunakan JavaScript
