@@ -90,6 +90,13 @@
 - Membuat Class Error
 - Iterable dan Iterator
 
+# JavaScript Standard Library
+- Number
+- String
+- Array
+- Object
+- JSON
+
 # Domain Object Model
 
 # JavaScript Async
