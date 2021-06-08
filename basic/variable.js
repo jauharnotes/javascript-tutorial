@@ -1,6 +1,6 @@
-var fullName = "Eko Kurniawan Khannedy";
-    var firstName = "Eko";
-    var middleName = "Kurniawna";
+var fullName = "Jauharuddin Khannedy";
+    var firstName = "Johar";
+    var middleName = "Uddin";
     var lastName = "Khannedy";
 
     document.writeln(fullName);
@@ -9,7 +9,7 @@ var fullName = "Eko Kurniawan Khannedy";
     document.writeln("</br>");
     document.writeln(fullName);
 
-    fullName = "Eko Khannedy";
+    fullName = "Jauharuddin Khannedy";
 
     document.writeln("</br>");
     document.writeln(fullName);
