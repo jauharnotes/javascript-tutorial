@@ -10,3 +10,5 @@ function buttonClick() {
   }, 5000);
   console.log("Succes Click Button");
 }
+
+buttonClick();
