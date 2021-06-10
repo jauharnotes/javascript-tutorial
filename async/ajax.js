@@ -5,12 +5,17 @@ function loadContent() {
     document.getElementById("button").innerHTML = "Loading....";
   };
 
-  ajax.onerror = function () {
+  // ajax.onerror = function () {
+  //   alert("Gagal mengambil data");
+  // };
+
+  function getProductError() {
     alert("Gagal mengambil data");
-  };
+    console.log("Gagal mengambil data");
+  }
 
   ajax.onloadend = function () {
-    if (this.responseText !== "") {
+    if (ajax.status === 200 && ajax.responseText != "") {
       let data = JSON.parse(this.responseText);
       let img = document.createElement("img");
       img.src = data.avatar_url;
@@ -23,6 +28,8 @@ function loadContent() {
       setTimeout(function () {
         document.getElementById("button").innerHTML = "Load Lagi...";
       }, 3000);
+    } else {
+      getProductError();
     }
   };
 
