@@ -1,3 +1,4 @@
+// String Instance Method dan Properties
 const names = "Jauhar Uddin";
 
 console.log(names.length);
