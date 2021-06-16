@@ -63,6 +63,8 @@
 
 # Pemrograman JavaScript Object Oriented Programming
 
+\*Daftar Materi:
+
 - Pengenalan Object Oriented Programming
 - Membuat Constructor Function
 - Property di Constructor Function
@@ -92,6 +94,8 @@
 
 # JavaScript Standard Library
 
+\*Daftar Materi:
+
 - Number
 - String
 - Array
@@ -101,6 +105,8 @@
 # Domain Object Model
 
 # JavaScript Async
+
+\*Daftar Materi:
 
 - Asyncrhonus
 - Callback
