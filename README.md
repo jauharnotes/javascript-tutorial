@@ -1,8 +1,8 @@
 # javascript-tutorial
 
-\*Daftar Materi:
-
 # Pemrograman JavaScript Dasar
+
+\*Daftar Materi:
 
 - Program Hello World
 - Komentar
@@ -91,6 +91,7 @@
 - Iterable dan Iterator
 
 # JavaScript Standard Library
+
 - Number
 - String
 - Array
