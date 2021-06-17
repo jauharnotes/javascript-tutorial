@@ -54,3 +54,16 @@ console.log("==============================");
   console.log(text.replace(/ja[aiueo]/gi, "ganteng"));
   console.log(text.split(/j/gi));
 }
+
+{
+  var myRe = /d(b+)d/g;
+  var myArray = myRe.exec('cdbbdbsbz');
+  console.log('The value of lastIndex is ' + myRe.lastIndex);
+
+  // "The value of lastIndex is 5"
+  
+  var myArray2 = /d(b+)d/g.exec('cdbbdbsbz');
+console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
+
+// "The value of lastIndex is 0"
+}
