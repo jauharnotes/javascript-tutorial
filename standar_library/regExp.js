@@ -67,3 +67,9 @@ console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
 
 // "The value of lastIndex is 0"
 }
+
+{
+  function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+}
