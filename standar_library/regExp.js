@@ -3,6 +3,29 @@
   const regex1 = /jauhar/;
   const regex2 = new RegExp("Jauhar");
   const regex3 = new RegExp(/jauhar/);
+
+  console.log(regex1);
+  console.log(regex2);
+  console.log(regex3);
+
+  console.log(typeof regex1);
+  console.log(typeof regex2);
+  console.log(typeof regex3);
+}
+
+{
+  let foo = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+  let pola = /\d+/g;
+
+  let hasil = foo.match(pola);
+
+  // for (const iterator of hasil) {
+  //   console.log(iterator);
+  // }
+
+  hasil.forEach((element) => {
+    console.log(element);
+  });
 }
 
 {
@@ -57,19 +80,19 @@ console.log("==============================");
 
 {
   var myRe = /d(b+)d/g;
-  var myArray = myRe.exec('cdbbdbsbz');
-  console.log('The value of lastIndex is ' + myRe.lastIndex);
+  var myArray = myRe.exec("cdbbdbsbz");
+  console.log("The value of lastIndex is " + myRe.lastIndex);
 
   // "The value of lastIndex is 5"
-  
-  var myArray2 = /d(b+)d/g.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
 
-// "The value of lastIndex is 0"
+  var myArray2 = /d(b+)d/g.exec("cdbbdbsbz");
+  console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
+
+  // "The value of lastIndex is 0"
 }
 
 {
   function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-}
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
+  }
 }
