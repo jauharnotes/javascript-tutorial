@@ -14,6 +14,52 @@
 }
 
 {
+  // Pola RegExp sebagai string
+  const foo = "Belajar JavaScript";
+
+  // case sensintif
+  console.log(/JavaScript/.test(foo));
+  console.log(/javaScript/.test(foo));
+  console.log(/Belajar/.test(foo));
+  console.log(/belajar/.test(foo));
+  console.log(/Java/.test(foo));
+  console.log(/ajar/.test(foo));
+
+  console.log("===========================");
+
+  // case insensitif dengan penambahan sebuah flag karakter 'i' setelah tanda forward
+  console.log(/JavaScript/i.test(foo));
+  console.log(/javaScript/i.test(foo));
+  console.log(/Belajar/i.test(foo));
+  console.log(/belajar/i.test(foo));
+  console.log(/Java/i.test(foo));
+  console.log(/ajar/i.test(foo));
+}
+
+console.log("===========================");
+
+{
+  // Wildcard
+  const pola = /.b../;
+
+  console.log(pola.test("abaa"));
+  console.log(pola.test("aba"));
+  console.log(pola.test("abbaa"));
+  console.log(pola.test("1b11"));
+  console.log(pola.test(" b  "));
+
+  console.log("===========================");
+
+  const pola2 = /^.b..$/;
+
+  console.log(pola2.test("abaa"));
+  console.log(pola2.test("aba"));
+  console.log(pola2.test("abbaa"));
+  console.log(pola2.test("1b11"));
+  console.log(pola2.test(" b  "));
+}
+
+{
   let foo = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
   let pola = /\d+/g;
 
