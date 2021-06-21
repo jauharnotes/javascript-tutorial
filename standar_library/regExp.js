@@ -59,11 +59,52 @@ console.log("===========================");
   console.log(pola2.test(" b  "));
 }
 
+console.log("===========================");
+
+{
+  // Pola negasi character set
+  const pola1 = /^[a-e]../;
+  const pola2 = /[^a-e]../;
+
+  console.log(pola1.test("abaa"));
+  console.log(pola1.test("fba"));
+  console.log(pola1.test("1dd"));
+  console.log(pola1.test(" dd"));
+  console.log(pola1.test("belajar"));
+
+  console.log("===========================");
+
+  console.log(pola2.test("abaa"));
+  console.log(pola2.test("fba"));
+  console.log(pola2.test("1dd"));
+  console.log(pola2.test(" dd"));
+  console.log(pola2.test("belajar"));
+}
+
+console.log("===========================");
+
+{
+  const pola1 = /A{2}1{3}/;
+  const pola2 = /A{2}1{2,3}/;
+
+  console.log(pola1.test("AA111"));
+  console.log(pola1.test("zzAAA111zz"));
+  console.log(pola1.test("AA111"));
+  console.log(pola1.test("A1111"));
+
+  console.log(pola2.test("AA111"));
+  console.log(pola2.test("zzAAA111zz"));
+  console.log(pola2.test("AA111"));
+  console.log(pola2.test("A1111"));
+}
+
 {
   let foo = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
   let pola = /\d+/g;
 
   let hasil = foo.match(pola);
+
+  console.log(hasil);
 
   // for (const iterator of hasil) {
   //   console.log(iterator);
