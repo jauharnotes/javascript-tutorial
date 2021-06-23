@@ -148,4 +148,9 @@ console.log("===================");
   foo.forEach(function () {
     console.log("JavaScript");
   });
+
+  const bar = ["a", "b", "c", "d", "e", "f", "g"];
+  bar.forEach(function (element, index) {
+    console.log(`Index ke: ${index} = ${element}`);
+  });
 }
