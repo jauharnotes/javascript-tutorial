@@ -12,3 +12,22 @@ for (const element of map) {
 }
 
 map.forEach((value, key) => console.log(`${key}: ${value}`));
+
+
+const foo = [1,2,3,4,5,6,7];
+
+const bar = foo.map(
+  function(element, index, array) {
+    return element * 2;
+  }
+);
+
+console.log(bar);
+
+function kaliDua(element) {
+  return element * 2;
+}
+
+const foo2 = [1,2,3,4,5,6,7];
+const bar2 = foo2.map(kaliDua);
+console.log(bar2);
