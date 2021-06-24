@@ -149,8 +149,25 @@ console.log("===================");
     console.log("JavaScript");
   });
 
+  // Array prototype forEach 2 argument
   const bar = ["a", "b", "c", "d", "e", "f", "g"];
   bar.forEach(function (element, index) {
     console.log(`Index ke: ${index} = ${element}`);
   });
+
+  // Array prototype forEach 3 argument
+  const bar2 = ["a", "b", "c", "d", "e", "f", "g"];
+  bar2.forEach(function (element, index, array) {
+    console.log(`Index ke: ${index} = ${element}`);
+    console.log(array);
+  });
+
+  function tampil(element, index) {
+    console.log(`Index ke: ${index} = ${element}`);
+  }
+
+  const name = ["Johar", "Juned", "Agung"];
+  name.forEach(tampil);
+  const name2 = ["Subakir", "Saidah", "Subki"];
+  name2.forEach(tampil);
 }
