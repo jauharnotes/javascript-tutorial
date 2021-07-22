@@ -45,3 +45,18 @@ let jumlahHuruf3 = mahasiswa3.map((name) => ({
 }));
 
 console.table(jumlahHuruf3);
+
+// this pada arow function
+const Books = function () {
+  this.book = "Outlers";
+  this.author = "Malcolm Gladwell";
+  this.publish = 2010;
+  this.reading = function () {
+    console.log(
+      `Saya membaca buku ${this.book} karya ${this.author} yang di publikasikan tahun ${this.publish}`
+    );
+  };
+};
+
+const bookReader = new Books();
+console.log(bookReader.reading());
