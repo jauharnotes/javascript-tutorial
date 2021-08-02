@@ -54,3 +54,38 @@ janji2
   });
 
 console.log("selesai");
+
+// Pomise.all()
+const film = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve([
+      {
+        judul: "Avengers",
+        sutradara: "Jauhar",
+        pemeran: "juned",
+      },
+    ]);
+  }, 1000);
+});
+
+const cuaca = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve([
+      {
+        kota: "Depok",
+        suhu: 40,
+        kondisi: "cerah berawan",
+      },
+    ]);
+  }, 500);
+});
+
+// film.then((result) => console.log(result));
+// cuaca.then((result) => console.log(result));
+
+// Promise.all([film, cuaca]).then((result) => console.log(result));
+Promise.all([film, cuaca]).then((result) => {
+  const [film, cuaca] = result;
+  console.log(film);
+  console.log(cuaca);
+});
