@@ -107,10 +107,30 @@
 // Merapikan kodingan
 const searchButton = document.querySelector(".search-button");
 searchButton.addEventListener("click", async function () {
-  const inputKeyword = document.querySelector(".input-keyword");
-  const movies = await getMovies(inputKeyword.value);
-  updateUi(movies);
+  try {
+    const inputKeyword = document.querySelector(".input-keyword");
+    const movies = await getMovies(inputKeyword.value);
+    updateUi(movies);
+  } catch (err) {
+    alert(err);
+  }
 });
+
+function getMovies(keyword) {
+  return fetch("http://www.omdbapi.com/?apikey=15a20b3e&s=" + keyword)
+    .then((response) => {
+      if (!response) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
+    .then((response) => {
+      if (response.Response === "False") {
+        throw Error(response.Error);
+      }
+      return response.Search;
+    });
+}
 
 // event binding
 document.addEventListener("click", async function (e) {
@@ -131,12 +151,6 @@ function updateUiDetaile(result) {
   const movieDetails = showDetails(result);
   const modalBody = document.querySelector(".modal-body");
   modalBody.innerHTML = movieDetails;
-}
-
-function getMovies(keyword) {
-  return fetch("http://www.omdbapi.com/?apikey=15a20b3e&s=" + keyword)
-    .then((response) => response.json())
-    .then((response) => response.Search);
 }
 
 function updateUi(movies) {
