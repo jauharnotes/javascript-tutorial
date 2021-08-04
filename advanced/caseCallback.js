@@ -68,41 +68,85 @@
 // });
 
 // menggunakan Fetch
-const searchButton = document.querySelector(".search-button");
-searchButton.addEventListener("click", function () {
-  let inputKeyword = document.querySelector(".input-keyword");
-  fetch("http://www.omdbapi.com/?apikey=15a20b3e&s=" + inputKeyword.value).then(
-    (response) => {
-      response.json().then((response) => {
-        const movies = response.Search;
-        let cards = "";
-        movies.forEach((result) => {
-          cards += showCards(result);
-          const movieContainer = document.querySelector(".movie-container");
-          movieContainer.innerHTML = cards;
+// const searchButton = document.querySelector(".search-button");
+// searchButton.addEventListener("click", function () {
+//   let inputKeyword = document.querySelector(".input-keyword");
+//   fetch("http://www.omdbapi.com/?apikey=15a20b3e&s=" + inputKeyword.value).then(
+//     (response) => {
+//       response.json().then((response) => {
+//         const movies = response.Search;
+//         let cards = "";
+//         movies.forEach((result) => {
+//           cards += showCards(result);
+//           const movieContainer = document.querySelector(".movie-container");
+//           movieContainer.innerHTML = cards;
 
-          const modalDetailButton = document.querySelectorAll(
-            ".modal-detail-button"
-          );
-          modalDetailButton.forEach((btn) => {
-            btn.addEventListener("click", function () {
-              const imdbid = this.dataset.imdbid;
-              fetch("http://www.omdbapi.com/?apikey=15a20b3e&i=" + imdbid).then(
-                (response) => {
-                  response.json().then((result) => {
-                    const movieDetails = showDetails(result);
-                    const modalBody = document.querySelector(".modal-body");
-                    modalBody.innerHTML = movieDetails;
-                  });
-                }
-              );
-            });
-          });
-        });
-      });
-    }
-  );
+//           const modalDetailButton = document.querySelectorAll(
+//             ".modal-detail-button"
+//           );
+//           modalDetailButton.forEach((btn) => {
+//             btn.addEventListener("click", function () {
+//               const imdbid = this.dataset.imdbid;
+//               fetch("http://www.omdbapi.com/?apikey=15a20b3e&i=" + imdbid).then(
+//                 (response) => {
+//                   response.json().then((result) => {
+//                     const movieDetails = showDetails(result);
+//                     const modalBody = document.querySelector(".modal-body");
+//                     modalBody.innerHTML = movieDetails;
+//                   });
+//                 }
+//               );
+//             });
+//           });
+//         });
+//       });
+//     }
+//   );
+// });
+
+// Merapikan kodingan
+const searchButton = document.querySelector(".search-button");
+searchButton.addEventListener("click", async function () {
+  const inputKeyword = document.querySelector(".input-keyword");
+  const movies = await getMovies(inputKeyword.value);
+  updateUi(movies);
 });
+
+// event binding
+document.addEventListener("click", async function (e) {
+  if (e.target.classList.contains("modal-detail-button")) {
+    const imdbid = e.target.dataset.imdbid;
+    const movieDetails = await getMovieDetail(imdbid);
+    updateUiDetaile(movieDetails);
+  }
+});
+
+function getMovieDetail(imdbid) {
+  return fetch("http://www.omdbapi.com/?apikey=15a20b3e&i=" + imdbid)
+    .then((response) => response.json())
+    .then((m) => m);
+}
+
+function updateUiDetaile(result) {
+  const movieDetails = showDetails(result);
+  const modalBody = document.querySelector(".modal-body");
+  modalBody.innerHTML = movieDetails;
+}
+
+function getMovies(keyword) {
+  return fetch("http://www.omdbapi.com/?apikey=15a20b3e&s=" + keyword)
+    .then((response) => response.json())
+    .then((response) => response.Search);
+}
+
+function updateUi(movies) {
+  let cards = "";
+  movies.forEach((result) => {
+    cards += showCards(result);
+  });
+  const movieContainer = document.querySelector(".movie-container");
+  movieContainer.innerHTML = cards;
+}
 
 function showCards(result) {
   return `<div class="col-md-3 my-3">
