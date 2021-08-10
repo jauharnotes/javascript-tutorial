@@ -5,18 +5,33 @@
 // });
 
 // DOM Traversal
-const close = document.querySelectorAll(".card");
-// for (let i = 0; i < close.length; i++) {
-//   close[i].addEventListener("click", function (event) {
+// const close = document.querySelectorAll(".close");
+// // for (let i = 0; i < close.length; i++) {
+// //   close[i].addEventListener("click", function (event) {
+// //     event.target.parentElement.style.display = "none";
+// //   });
+// // }
+
+// close.forEach((element) => {
+//   element.addEventListener("click", function (event) {
 //     event.target.parentElement.style.display = "none";
+//     // Prevent Default
+//     event.preventDefault();
+//     event.stopPropagation();
 //   });
-// }
+// });
 
-close.forEach((element) => {
-  element.addEventListener("click", function (event) {
+// const cards = document.querySelectorAll(".card");
+// cards.forEach((element) => {
+//   element.addEventListener("click", function (event) {
+//     console.log(event);
+//   });
+// });
+
+const container = document.querySelector(".container");
+container.addEventListener("click", function (event) {
+  if (event.target.className == "close") {
     event.target.parentElement.style.display = "none";
-  });
+    event.preventDefault();
+  }
 });
-
-const nama = document.querySelector(".nama");
-console.log(nama.nextElementSibling.nextElementSibling);
