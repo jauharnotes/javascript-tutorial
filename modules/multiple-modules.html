@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Modules</title>
+  </head>
+  <body>
+    <script type="module">
+      import { company, price, Company } from "./script/multipleModules.js";
+      import {
+        company as perusahaan,
+        price as harga,
+        Company as ukm,
+      } from "./script/multipleModules2.js";
+
+      console.log(company);
+      console.log(price(5000, 7000));
+      const a = new Company();
+
+      console.log(perusahaan);
+      console.log(harga(5000, 6000));
+      const b = new ukm();
+    </script>
+  </body>
+</html>
