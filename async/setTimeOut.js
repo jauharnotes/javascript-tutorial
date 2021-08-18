@@ -1,3 +1,5 @@
+console.log("Start");
+
 function callback() {
   console.log("Hello World");
 }
@@ -12,3 +14,5 @@ function buttonClick() {
 }
 
 buttonClick();
+
+console.log("Akhir");
