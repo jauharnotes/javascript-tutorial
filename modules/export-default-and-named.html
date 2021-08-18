@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Export Default Variable</title>
+    <title>Export Default And Named</title>
   </head>
   <body>
     <script type="module">
-      import { default as nameDefault } from "./script/exportDefaultVariable.js";
+      import outhorName, {
+        content,
+        title,
+      } from "./script/exportDefault&Named.js";
 
-      console.log(nameDefault);
+      console.log(title);
+      console.log(content);
+      console.log(outhorName);
     </script>
   </body>
 </html>

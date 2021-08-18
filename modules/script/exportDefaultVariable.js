@@ -1,1 +1,1 @@
-export default perusahaan = "PT Pecel Lele Jaya Abadi";
+export default name = "PT Pecel Lele Jaya Abadi";

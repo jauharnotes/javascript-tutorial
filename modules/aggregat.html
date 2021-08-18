@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggregat</title>
+  </head>
+  <body>
+    <script type="module">
+      import { Person, sayHello, Harga } from "./script/aggregate.js";
+
+      console.log(sayHello("johar"));
+
+      const Sapa = new Person("juned");
+      Sapa.sayHello("johar");
+
+      const Rego = new Harga("Nasi Pecel Lele");
+      Rego.price(4000, 7000);
+    </script>
+  </body>
+</html>
