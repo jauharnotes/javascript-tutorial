@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Computed Style</title>
+    <style>
+      h1 {
+        color: green;
+        background-color: #cac8c3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">belajar javascripts</h1>
+    <script>
+      const h1Node = document.getElementById("judul");
+      const resultStyle = getComputedStyle(h1Node, null);
+
+      console.log(resultStyle);
+      console.log(resultStyle[0]);
+      console.log(resultStyle[1]);
+
+      console.log(resultStyle.color);
+      console.log(resultStyle.backgroundColor);
+      console.log(resultStyle.height);
+    </script>
+  </body>
+</html>

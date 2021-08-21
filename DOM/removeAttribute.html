@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Has Attribute</title>
+  </head>
+  <body>
+    <h1 id="judul" title="sedang belajar">Sedang belajar javascripts</h1>
+
+    <script>
+      const node = document.getElementById("judul");
+      console.log(node.getAttribute("id"));
+      console.log(node.getAttribute("title"));
+
+      node.removeAttribute("id", "judul artikel");
+      node.removeAttribute("title", "jangan diganggu");
+      node.removeAttribute("class", "header");
+
+      console.log(node.getAttribute("id"));
+      console.log(node.getAttribute("title"));
+      console.log(node.getAttribute("class"));
+    </script>
+  </body>
+</html>

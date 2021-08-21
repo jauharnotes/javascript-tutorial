@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Has Attribute</title>
+  </head>
+  <body>
+    <h1 id="judul" title="sedang belajar">Sedang belajar javascripts</h1>
+
+    <script>
+      const node = document.getElementById("judul");
+      console.log(node.getAttribute("id"));
+      console.log(node.getAttribute("title"));
+
+      node.setAttribute("id", "judul artikel");
+      node.setAttribute("title", "jangan diganggu");
+      node.setAttribute("class", "header");
+
+      console.log(node.getAttribute("id"));
+      console.log(node.getAttribute("title"));
+      console.log(node.getAttribute("class"));
+
+      node.setAttribute("style", "color: red; text-shadow:8px 8px pink");
+    </script>
+  </body>
+</html>
