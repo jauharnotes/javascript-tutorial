@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handler</title>
+  </head>
+  <body>
+    <button id="click1">Click Me!</button>
+    <button id="click2">Double Click Me!</button>
+
+    <script>
+      function tampilkan1() {
+        alert("saya di click");
+      }
+
+      const button = document.getElementById("click1");
+      button.onclick = tampilkan1;
+
+      const button2 = document.getElementById("click2");
+      button2.ondblclick = function () {
+        alert("saya di double click");
+      };
+    </script>
+  </body>
+</html>

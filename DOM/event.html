@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1 onclick="alert('saya di click kiri')">Belajar JavaScript</h1>
+    <h1 ondblclick="alert('saya di double click')">Belajar JavaScript</h1>
+    <h1 oncontextmenu="alert('saya di click kanan')">Belajar JavaScript</h1>
+    <h1 onmouseover="alert('saya di mouseover')">Belajar JavaScript</h1>
+
+    <h2 onclick="document.querySelector('p').innerHTML= 'Judul di klick'" ;>
+      Belajar JavaScript
+    </h2>
+
+    <h2 onclick="tampilkan();">Belajar JavaScript</h2>
+    <p></p>
+
+    <script>
+      function tampilkan() {
+        document.querySelector("p").innerHTML = "Judul di klick";
+      }
+    </script>
+  </body>
+</html>
