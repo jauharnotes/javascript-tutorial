@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <button>Click</button>
+    <p></p>
+
+    <script>
+      // cara pertama
+      function tampilkanClick() {
+        document.querySelector("p").innerHTML = "judul di klik";
+      }
+
+      function tampilkanDbclick() {
+        document.querySelector("p").innerHTML = "judul di double klik";
+      }
+
+      function tampilkanKlickKanan() {
+        document.querySelector("p").innerHTML = "judul di klik kanan";
+      }
+
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", tampilkanClick);
+      btn.addEventListener("dblclick", tampilkanDbclick);
+      btn.addEventListener("contextmenu", tampilkanKlickKanan);
+
+      // cara kedua
+      //   const btn2 = document.querySelector("button");
+      //   btn2.addEventListener("lclick", function () {
+      //     document.querySelector("p"), (innerHTML = "judul di click");
+      //   });
+    </script>
+  </body>
+</html>
