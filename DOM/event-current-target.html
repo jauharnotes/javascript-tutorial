@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Current Target</title>
+    <style>
+      h1,
+      h2,
+      div {
+        width: 280px;
+        padding: 10px;
+        text-align: center;
+        color: red;
+        background-color: pink;
+        cursor: pointer;
+      }
+
+      table,
+      td {
+        border: 1px solid black;
+      }
+
+      td {
+        padding: 10px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Belajar HTML</h1>
+    <h2 id="judul2">Belajar CSS</h2>
+    <div id="tagDiv">Belajar JavaScript</div>
+    <p id="placeholder"></p>
+
+    <br /><br />
+
+    <table>
+      <tr>
+        <td>red</td>
+        <td>blue</td>
+        <td>green</td>
+      </tr>
+      <tr>
+        <td>yellow</td>
+        <td>brown</td>
+        <td>pink</td>
+      </tr>
+      <tr>
+        <td>aqua</td>
+        <td>magenta</td>
+        <td>orange</td>
+      </tr>
+    </table>
+
+    <script>
+      const h1Node = document.getElementById("judul");
+      const h2Node = document.getElementById("judul2");
+      const divNode = document.getElementById("tagDiv");
+
+      const pNode = document.getElementById("placeholder");
+
+      function show(e) {
+        // pNode.innerHTML = e.target.nodeName;
+        // const message = `Sedang serius ${e.target.innerHTML}`;
+        // pNode.innerHTML = message;
+        const idTarget = e.target.getAttribute("id");
+        if (idTarget === "judul") {
+          e.target.style.backgroundColor = "yellow";
+        } else if (idTarget === "judul2") {
+          e.target.style.backgroundColor = "aqua";
+        } else {
+          e.target.style.backgroundColor = "silver";
+        }
+      }
+
+      h1Node.addEventListener("click", show);
+      h2Node.addEventListener("click", show);
+      divNode.addEventListener("click", show);
+
+      // merubah warna table dengan event target
+      const table = document.querySelector("table");
+
+      function changeColor(e) {
+        let color = (e.target.style.backgroundColor = e.target.innerHTML);
+        console.log(color);
+        return color;
+      }
+
+      table.addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Object</title>
+  </head>
+  <body>
+    <button id="btn">Click!</button>
+    <p></p>
+
+    <script>
+      const btn = document.getElementById("btn");
+      const pNode = document.querySelector("p");
+
+      //   btn.addEventListener("click", function (event) {
+      //     if (event.ctrlKey === true) {
+      //       pNode.innerHTML = "Tombol CTRL Terdeteksi";
+      //     } else if (event.altKey === true) {
+      //       pNode.innerHTML = "Tombol ALT Terdeteksi";
+      //     } else {
+      //       pNode.innerHTML = "Button Di Click";
+      //     }
+      //     console.log(event);
+      //     console.log(event.type);
+      //     console.log(event.bubbles);
+      //     console.log(event.cancelable);
+      //     console.log(event.defaultPrevented);
+      //     console.log(event.detail);
+      //     console.log(event.currentTarget);
+      //     console.log(event.relatedTarget);
+      //     console.log(event.screenX);
+      //     console.log(event.screenY);
+      //     console.log(event.clientX);
+      //     console.log(event.clientY);
+      //     console.log(event.button);
+      //     console.log(event.ctrlKey);
+      //     console.log(event.shiftKey);
+      //     console.log(event.altKey);
+      //   });
+
+      // function terpisah
+      function show(event) {
+        if (event.ctrlKey === true) {
+          pNode.innerHTML = "Tombol CTRL Terdeteksi";
+        } else if (event.altKey === true) {
+          pNode.innerHTML = "Tombol ALT Terdeteksi";
+        } else {
+          pNode.innerHTML = "Button Di Click";
+        }
+      }
+
+      btn.addEventListener("click", show);
+    </script>
+  </body>
+</html>

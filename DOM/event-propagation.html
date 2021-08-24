@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation</title>
+  </head>
+  <body>
+    <div id="bubbling">
+      <span>Event Propagation: Bubbling</span>
+      <h1>Belajar <em>JavaScript</em></h1>
+    </div>
+
+    <div id="capturing">
+      <span>Event Propagation: Capturing</span>
+      <h1>Belajar <em>JavaScript</em></h1>
+    </div>
+
+    <script>
+      // Event Propagation: Bubbling
+      const emNode = document.querySelector("#bubbling em");
+      const h1Node = document.querySelector("#bubbling h1");
+      const divNode = document.querySelector("#bubbling ");
+
+      function showEm() {
+        console.log("Tag em di click");
+      }
+
+      function showH1() {
+        console.log("Tag h1 di click");
+      }
+
+      function showDiv() {
+        console.log("Tag div di click");
+      }
+
+      emNode.addEventListener("click", showEm);
+      h1Node.addEventListener("click", showH1);
+      divNode.addEventListener("click", showDiv);
+
+      // Event Propagation: Capturing
+      const emNode2 = document.querySelector("#capturing em");
+      const h1Node2 = document.querySelector("#capturing h1");
+      const divNode2 = document.querySelector("#capturing ");
+
+      emNode2.addEventListener("click", showEm, true);
+      h1Node2.addEventListener("click", showH1, true);
+      divNode2.addEventListener("click", showDiv, true);
+    </script>
+  </body>
+</html>
