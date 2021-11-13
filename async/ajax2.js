@@ -5,6 +5,10 @@ function displayResponse(json) {
 
 const ajax = new XMLHttpRequest();
 ajax.open("GET", "api/hello.json");
+ajax.onreadystatechange = function () {
+  console.info(`EWady State Change ${ajax.readyState}`);
+};
+
 ajax.addEventListener("load", function () {
   if (ajax.status === 200) {
     const json = JSON.parse(ajax.responseText);
