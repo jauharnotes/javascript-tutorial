@@ -39,4 +39,5 @@ getProducts()
     document.getElementById("id").textContent = error;
     document.getElementById("name").textContent = error;
     document.getElementById("price").textContent = error;
-  });
+  })
+  .finally(() => console.log("finished"));
