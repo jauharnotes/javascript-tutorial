@@ -1,4 +1,5 @@
 {
-    "product": "Macbook Pro",
+    "id": "1",
+    "name": "Macbook Pro",
     "price": "35000000"
 }
